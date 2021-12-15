@@ -30,6 +30,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        //changes the title of the page on phone
         setTitle("My Spaceships");
 
         //Taking the username from login screen and showing it as username on this screen

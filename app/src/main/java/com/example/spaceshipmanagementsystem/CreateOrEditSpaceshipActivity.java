@@ -10,6 +10,6 @@ public class CreateOrEditSpaceshipActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_or_edit_spaceship);
-        setTitle("New Spaceship");
+        setTitle("Add new Spaceship");
     }
 }
