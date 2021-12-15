@@ -3,12 +3,15 @@ package com.example.spaceshipmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.spaceshipmanagementsystem.db.SqliteHelper;
 
@@ -18,6 +21,7 @@ import java.util.List;
 public class WelcomeActivity extends AppCompatActivity {
     
     private ListView shipList;
+
     
     //Data management variable
     List<String> shipsFromDb = new ArrayList<>();
@@ -26,6 +30,14 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        setTitle("My Spaceships");
+
+        //Taking the username from login screen and showing it as username on this screen
+        Intent welcome = getIntent();
+        String name = welcome.getStringExtra("USERNAME");
+        ((TextView)findViewById(R.id.usernameView)).setText(name);
+
+
     
         SqliteHelper dbHelper = new SqliteHelper(this);
     
@@ -91,4 +103,12 @@ public class WelcomeActivity extends AppCompatActivity {
         shipList.setAdapter(arrayAdapter);
         
     }
+
+
+    public void createSpaceship(View view) {
+        Intent createNewSpaceship = new Intent(this, CreateOrEditSpaceshipActivity.class);
+        startActivity(createNewSpaceship);
+    }
+
+
 }

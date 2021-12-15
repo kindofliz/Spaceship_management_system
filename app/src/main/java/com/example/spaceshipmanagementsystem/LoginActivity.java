@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         } else if (username.equals("Liza") && password.equals("qwerty")) {
             Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show();
             Intent welcome = new Intent(LoginActivity.this, WelcomeActivity.class);
+            welcome.putExtra("USERNAME", username);
             startActivity(welcome);
         } else {
             Toast.makeText(this, "Username or Password is incorrect!", Toast.LENGTH_SHORT).show();

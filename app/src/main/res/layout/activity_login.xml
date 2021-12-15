@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
-    android:background="@android:color/holo_red_light">
+    tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/testLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="178dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ship2"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"
-        android:id="@+id/testLogo" />
+        android:gravity="top"
+        android:orientation="horizontal">
 
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:gravity="top"
-       android:orientation="horizontal">
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:gravity="center"
-           android:text="SPACESHIP MANAGEMENT SYSTEM"
-           android:textColor="@color/black"
-           android:textSize="30sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="SPACESHIP MANAGEMENT SYSTEM"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,16 +37,18 @@
         android:layout_height="wrap_content"
         android:gravity="top"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:text="Username: " />
+            android:text="Username: "
+            android:textColor="@color/black" />
+
         <EditText
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/username"
             android:layout_weight="1"
             android:ems="10"
             android:textAlignment="center" />
@@ -54,12 +59,13 @@
         android:layout_height="wrap_content"
         android:gravity="top"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:text="Password: " />
+            android:text="Password: "
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/password"
@@ -76,11 +82,12 @@
         android:layout_height="wrap_content"
         android:gravity="top"
         android:orientation="horizontal">
-       <Button
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Login"
-           android:id="@+id/btnLogin"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login" />
     </LinearLayout>
 
 </LinearLayout>
