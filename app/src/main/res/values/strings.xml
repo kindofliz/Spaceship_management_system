@@ -14,5 +14,5 @@
     <string name="mass_hint">Enter the mass</string>
     <string name="location_hint">Enter the Location</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
+    <string name="add">ADD</string>
 </resources>

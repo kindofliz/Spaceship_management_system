@@ -38,31 +38,30 @@ public class WelcomeActivity extends AppCompatActivity {
         String name = welcome.getStringExtra("USERNAME");
         ((TextView)findViewById(R.id.usernameView)).setText(name);
 
-
     
         SqliteHelper dbHelper = new SqliteHelper(this);
-    
-        //a temporary way to fill the db table with some data when app is run
-        String title = "Better tin Can";
-        String myColor = "RED";
-        String mass = "100";
-        String location = "Riga";
-        String image = "";
-    
+
+//        //a temporary way to fill the db table with some data when app is run
+//        String title = "Better tin Can";
+//        String myColor = "RED";
+//        String mass = "100";
+//        String location = "Riga";
+//        String image = "";
+//
         // Gets the data repository in write mode
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-    
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_TITLE, title);
-        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_MASS, mass);
-        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_COLOR, myColor);
-        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_LOCATION, location);
-        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_IMAGE_URL, image);
-    
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId = db.insert(SqliteHelper.SpaceshipEntry.TABLE_NAME, null, values);
-    
+//
+//        // Create a new map of values, where column names are the keys
+//        ContentValues values = new ContentValues();
+//        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_TITLE, title);
+//        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_MASS, mass);
+//        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_COLOR, myColor);
+//        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_LOCATION, location);
+//        values.put(SqliteHelper.SpaceshipEntry.COLUMN_NAME_IMAGE_URL, image);
+//
+//        // Insert the new row, returning the primary key value of the new row
+//        long newRowId = db.insert(SqliteHelper.SpaceshipEntry.TABLE_NAME, null, values);
+
         
         //Read information from a database
         SQLiteDatabase readDb = dbHelper.getReadableDatabase();
